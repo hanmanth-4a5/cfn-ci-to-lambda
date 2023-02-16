@@ -11,7 +11,7 @@ Resources:
   LambdaRole:
     Type: AWS::IAM::Role
     Properties:
-      RoleName: "lambda-role-example"
+      RoleName: "cfn-to-ci-lambda-role"
       Description: "Role assigned to lambdas"
       AssumeRolePolicyDocument:
         Version: "2012-10-17"
@@ -36,7 +36,7 @@ Resources:
   Lambda:
     Type: AWS::Lambda::Function
     Properties:
-      FunctionName: "lambda-example"
+      FunctionName: "cfn-to-ci-lambda"
       Description: "Lambda example"
       Code: ./src/
       Handler: lambda.handler
