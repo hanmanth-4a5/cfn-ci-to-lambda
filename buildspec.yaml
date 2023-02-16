@@ -8,7 +8,7 @@ phases:
    - sam build
    - export BUCKET=abhinandan-ci-lambda-001
    - export TEMPLATE=template.yml
-   - export TEMPLATE_FILE_NAMEoutput_template_stag.yml
+   - export TEMPLATE_FILE_NAME=output_template_stag.yml
    - sam package --template-file $TEMPLATE --s3-bucket $BUCKET --output-template-file $TEMPLATE_FILE_NAME
 artifacts:
  type: zip
