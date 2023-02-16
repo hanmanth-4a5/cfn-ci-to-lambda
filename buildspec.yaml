@@ -15,6 +15,3 @@ artifacts:
  files:
   - $TEMPLATE
   - $TEMPLATE_FILE_NAME
-  - '*config.json'
-  discard-paths: yes
-  
