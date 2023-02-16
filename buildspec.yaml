@@ -11,9 +11,10 @@ phases:
    - export TEMPLATE_FILE_NAME=output_template_stag.yml
    - sam package --template-file $TEMPLATE --s3-bucket $BUCKET --output-template-file $TEMPLATE_FILE_NAME
 artifacts:
- type: zip
+ # type: zip
  files:
   - $TEMPLATE
   - $TEMPLATE_FILE_NAME
- 
+  - '*config.json'
+  discard-paths: yes
   
