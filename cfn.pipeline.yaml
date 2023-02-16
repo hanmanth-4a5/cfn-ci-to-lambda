@@ -133,6 +133,6 @@ Resources:
                 Capabilities: CAPABILITY_IAM,CAPABILITY_NAMED_IAM
                 RoleArn: !Ref CloudformationRoleArn
                 TemplatePath: !Sub "BuildArtifact::${TemplateFileName}"
-                TemplateConfiguration: BuildArtifact::config.json
+                # TemplateConfiguration: BuildArtifact::config.json
               InputArtifacts:
                 - Name: BuildArtifact
