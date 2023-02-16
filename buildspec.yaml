@@ -15,4 +15,6 @@ artifacts:
  files:
   - $TEMPLATE
   - $OUTPUT_TEMPLATE
+  - '*config.json'
+  discard-paths: yes
   
