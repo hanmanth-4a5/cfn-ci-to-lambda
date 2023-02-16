@@ -7,7 +7,7 @@ phases:
   commands:
    - sam build
    - export BUCKET=abhinandan-ci-lambda-001
-   - export TEMPLATE=cfn.yml
+   - export TEMPLATE=template.yml
    - export OUTPUT_TEMPLATE=output_template_stag.yml
    - sam package --template-file $TEMPLATE --s3-bucket $BUCKET --output-template-file $OUTPUT_TEMPLATE
 artifacts:
