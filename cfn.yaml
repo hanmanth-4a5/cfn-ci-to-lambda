@@ -38,7 +38,7 @@ Resources:
     Properties:
       FunctionName: "cfn-to-ci-lambda"
       Description: "Lambda example"
-      Code: ./src/
+      Code: ./cfn-ci-to-lambda/
       Handler: lambda.handler
       Runtime: python3.9
       Timeout: 900
