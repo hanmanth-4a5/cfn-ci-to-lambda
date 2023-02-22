@@ -14,10 +14,10 @@ Parameters:
   S3ArtifactStore:
     Type: String
     Description: Name of S3 bucket
-  S3BuildsPrefix:
-    Type: String
-    Default: builds/lambdas
-    Description: Location of lambda builds in S3 Bucket
+  # S3BuildsPrefix:
+    # Type: String
+    # Default: builds/lambdas
+    # Description: Location of lambda builds in S3 Bucket
   TemplateFileName:
     Type: String
     Default: template_file.yaml
@@ -61,8 +61,8 @@ Resources:
             Value: !Ref "AWS::AccountId"
           - Name: S3_BUCKET # this is the s3 bucket where lambda code will be uploaded to
             Value: !Ref S3ArtifactStore # Ref commands refer to parameters
-          - Name: S3_BUILDS_PREFIX # this is the s3 location where the code will be uploaded to
-            Value: !Ref S3BuildsPrefix
+          # - Name: S3_BUILDS_PREFIX # this is the s3 location where the code will be uploaded to
+            # Value: !Ref S3BuildsPrefix
           - Name: TEMPLATE_FILE_NAME # this is the name for the cloudformation file that will define lambda (explained in article)
             Value: !Ref TemplateFileName
       ServiceRole: !Ref CodebuildRoleArn # this role was created earlier. The codebuild project will take on this role
