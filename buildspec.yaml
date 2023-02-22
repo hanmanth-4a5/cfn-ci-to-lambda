@@ -12,6 +12,6 @@ phases:
 artifacts:
   files:
     - '$TEMPLATE_FILE_NAME'
-    # - '*config.json'
+    - '*config.json'
   discard-paths: yes
   
