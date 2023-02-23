@@ -81,6 +81,7 @@ Resources:
         Type: S3
         Location: !Ref S3ArtifactStore
       RoleArn: !Ref CodepipelineRoleArn
+      DeletionPolicy : Retain
       # the following types of stages can be defined: (source, build, test, deploy, invoke, approval)
       # each stage can have multiple actions
       Stages:
