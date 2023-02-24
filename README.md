@@ -1,1 +1,1 @@
-CloudFormation example to update a Lambda function using CodePipeline via GitHub actions.
+CloudFormation example to update a Lambda function with CodePipeline via GitHub actions.
