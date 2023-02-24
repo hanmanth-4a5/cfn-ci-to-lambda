@@ -1,1 +1,1 @@
-CloudFormation template to update a Lambda function through CodePipeline via GitHub actions.
+CloudFormation project to update a Lambda function through CodePipeline via GitHub actions.
