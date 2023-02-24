@@ -81,7 +81,6 @@ Resources:
         Type: S3
         Location: !Ref S3ArtifactStore
       RoleArn: !Ref CodepipelineRoleArn
-      DeletionPolicy : Retain
       # the following types of stages can be defined: (source, build, test, deploy, invoke, approval)
       # each stage can have multiple actions
       Stages:
@@ -128,6 +127,7 @@ Resources:
                 Owner: AWS
                 Provider: CloudFormation
                 Version: '1'
+                DeletionPolicy : Retain
               Configuration:
                 StackName: !Sub "cfn-ci-to-lambda-stack"
                 ActionMode: REPLACE_ON_FAILURE
