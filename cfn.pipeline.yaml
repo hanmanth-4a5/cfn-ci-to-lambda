@@ -131,7 +131,7 @@ Resources:
                 Version: '1'
               Configuration:
                 StackName: !Sub "cfn-ci-to-lambda-stack"
-                ActionMode: REPLACE_ON_FAILURE
+                ActionMode: CREATE_UPDATE
                 Capabilities: CAPABILITY_IAM,CAPABILITY_NAMED_IAM
                 RoleArn: !Ref CloudformationRoleArn
                 TemplatePath: !Sub "BuildArtifact::${TemplateFileName}"
