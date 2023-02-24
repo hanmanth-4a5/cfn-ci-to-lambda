@@ -41,6 +41,7 @@ Resources:
   # It can be used for building and testing code.
   CodeBuild:
     Type: AWS::CodeBuild::Project
+    DeletionPolicy : Retain
     Properties:
       Name: "cfn-ci-to-lambda-cb"
       # artifacts are settings for files outputted after running this codebuild e.g. an executable file
@@ -75,6 +76,7 @@ Resources:
   # code pipeline defines a set of stages that describe how code changes go through a release process
   Codepipeline:
     Type: AWS::CodePipeline::Pipeline
+    DeletionPolicy : Retain
     Properties:
       Name: "cfn-ci-to-lambda-cp"
       ArtifactStore: # specifies the s3 bucket where artifacts (files) from this pipeline should be stored
@@ -127,7 +129,6 @@ Resources:
                 Owner: AWS
                 Provider: CloudFormation
                 Version: '1'
-                DeletionPolicy : Retain
               Configuration:
                 StackName: !Sub "cfn-ci-to-lambda-stack"
                 ActionMode: REPLACE_ON_FAILURE
